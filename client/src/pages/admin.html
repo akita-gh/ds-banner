@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" href="../icon/ds.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="../icon/ds.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Discord Banners</title>
+  </head>
+  <body>
+    <!-- Navigation start -->
+    <nav class="nav">
+      <div class="container">
+        <div class="nav__links">
+          <a href="../../index.html" class="logo">DISCORD BEAUTIFUL</a>
+          <a href="#" class="ds">BY AKITA <span>discord akita1200</span></a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation end -->
+
+    <div class="menu">
+        <ul>
+            <li class="dropdown">
+              <a href="#">Создать <span>+</span></a>
+              <div class="dropdown-content">
+                <a href="#" id="webDevMenuItem">Баннер+аватар</a>
+              </div>
+            </li>
+            <li><a href="#">ХЗ чё придумать</a></li>
+          </ul>
+          <div class="modal" id="webDevModal">
+            <form class="modal-content">
+              <h2>Загрузить аватар</h2>
+              <label for="images" class="drop-container" id="dropcontainer">
+                <span class="drop-title">Кинуть файл сюда</span>
+                или
+                <input type="file" id="images" accept="image/*" required class="uploadbtn">
+              </label>
+              <h2>Загрузить баннер</h2>
+              <label for="images" class="drop-container" id="dropcontainer">
+                <span class="drop-title">Кинуть файл сюда</span>
+                или
+                <input type="file" id="images" accept="image/*" required class="uploadbtn">
+              </label>
+              <button class="close-modal glow-on-hover" type="submit">Отправить</button>
+              <button class="close-modal glow-on-hover" id="close-webDevModal">Закрыть</button>
+            </form>
+          </div>
+          
+    </div>
+
+
+    <!-- Footer start -->
+    <!-- <footer>
+        <div class="container">
+            <div class="footer__text">предложения по улучшению сайта, дизайна discord akita1200</div>
+        </div>
+    </footer> -->
+    <!-- Footer end -->
+
+    <!-- Scripts start -->
+    <script src="./src/js/modal.js"></script>
+    <script src="../js/modal2.js"></script>
+    <script src="../js/dropdown.js"></script>
+  </body>
+</html>
