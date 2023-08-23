@@ -4,6 +4,7 @@
   width: 315px;
   /* opacity: 0.5; */
   display: block;
+  margin-top: 10px;
 }
 
 .banner img {
@@ -154,7 +155,7 @@
 
 .banner-item {
   height: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 /* MODAL WINDOW */

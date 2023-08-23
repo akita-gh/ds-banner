@@ -5,7 +5,7 @@
     margin: 0 auto;
     margin-top: 50px;
   }
-  
+
   h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -22,15 +22,16 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #fff;
-    border-radius: 16px;
+    border: 1px solid #fb0ae8;
+    border-radius: 6px;
     background-color: transparent;
     color: #fff;
     outline: none;
   }
-  
-  input:active {
-    border: 1px solid #5f0000;
+
+  input:active,input:hover {
+    border: 1px solid #b107a3;
+    transition: 1s ease-in;
   }
 
   button {
@@ -42,3 +43,4 @@
     margin-top: 15px;
   }
   
+  /* reg */
