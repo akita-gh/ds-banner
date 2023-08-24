@@ -3,6 +3,7 @@
 @import url(./footer.css);
 @import url(./auth.css);
 @import url(./admin.css);
+@import url(./password-gen.css);
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
 * {
@@ -24,6 +25,11 @@ body {
 .nav__links {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.nav__links ul {
+  list-style: none;
 }
 
 .logo .ds, a{
