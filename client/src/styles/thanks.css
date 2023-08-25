@@ -1,0 +1,35 @@
+.subtitle {
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.thanks-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ee0ae8;
+    text-shadow: 1px 1px 20px;
+}
+
+.thx  {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ee0ae8;
+    display: flex;
+    justify-content: center;
+}
+
+.thx span {
+    margin-left: 5px;
+    color: #fff;
+}
+
+.donate {
+    text-decoration: revert;
+    color: cornflowerblue;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}

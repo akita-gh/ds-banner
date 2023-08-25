@@ -23,11 +23,18 @@
     position: relative;
   }
   
+  .dropdown img {
+    top: 3px;
+    left: 110px;
+    position: absolute;
+    /* transform: rotateX(180deg); */
+  }
+
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
-    width: 200px;
+    background-color: #1a1a1a;
+    width: 225px;
     z-index: 1;
   }
   
