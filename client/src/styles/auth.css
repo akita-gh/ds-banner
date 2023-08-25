@@ -4,6 +4,8 @@
     width: 300px;
     margin: 0 auto;
     margin-top: 50px;
+    border-radius: 16px;
+    background: #0e0e0e;
   }
 
   h1 {
