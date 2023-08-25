@@ -1,0 +1,13 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.login:hover {
+    color: var(--main-purple-color);
+    transition: 0.5s ease-in;
+}
