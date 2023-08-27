@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Discord Banners</title>
+    <title>Discord Banners - Регистрация</title>
   </head>
   <body>
     <!-- Navigation start -->
@@ -31,28 +31,37 @@
       </div>
     </nav>
 
+    <!-- login form -->
+
     <div class="container">
-        <form class="registration-form">
-            <h1>Регистрация</h1>
-          <label for="username">nickname</label>
-          <input type="text" id="username" name="username" autocomplete="off" required>
-          <label for="password">password</label>
-          <input type="password" id="password" name="password" required>
-          <a href="./auth.html" class="login">Есть аккаунт? Войти</a>
-          <button type="submit" class="glow-on-hover" ><a href="../../../client/src/pages/admin.html">Войти</a></button>
-        </form>
-      </div>
-   
-
-    <!-- Footer start -->
-    <!-- <footer>
-        <div class="container">
-            <div class="footer__text">предложения по улучшению сайта, дизайна discord akita1200</div>
+    <div class="box box-reg">
+      <form>
+        <h2>Регистрация</h2>
+        <div class="inputBox">
+            <input type="text" required="required">
+            <span>Имя пользователя</span>
+            <i></i>
         </div>
-    </footer> -->
-    <!-- Footer end -->
-
+        <div class="inputBox">
+            <input type="password" required="required">
+            <span>Пароль</span>
+            <i></i>
+        </div>
+        <div class="inputBox">
+            <input type="email" required="required">
+            <span>Email</span>
+            <i></i>
+        </div>
+        <div class="links">
+            <!-- <a href="">Забыл пароль?</a> -->
+            <a href="./auth-signin.html">Есть аккаунт?</a>
+        </div>
+        <input type="submit" value="Зарегистрироваться">
+      </form>
+    </div>
+</div>
     <!-- Scripts start -->
+    <script src="../js/login.js"></script>
     <script src="./src/js/modal.js"></script>
   </body>
 </html>

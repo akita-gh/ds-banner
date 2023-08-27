@@ -14,11 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Auth</title>
+    <title>Discord Banners - Вход</title>
   </head>
   <body>
     <!-- Navigation start -->
-
     <nav class="nav">
       <div class="container">
         <div class="nav__links">
@@ -31,27 +30,46 @@
       </div>
     </nav>
 
+
     <div class="container">
-        <form class="registration-form">
-          <h1>Вход</h1>
-          <label for="username">nickname</label>
-          <input type="text" id="username" name="username" autocomplete="off" required>
-          <label for="password">password</label>
-          <input type="password" id="password" name="password" required>
-          <button type="submit" class="glow-on-hover" ><a href="../../../client/src/pages/admin.html">Войти</a></button>
+      <div class="box">
+        <form>
+          <h2>Вход</h2>
+          <div class="inputBox">
+              <input type="text" required="required">
+              <span>Имя пользователя</span>
+              <i></i>
+          </div>
+          <div class="inputBox">
+              <input type="password" required="required">
+              <span>Пароль</span>
+              <i></i>
+          </div>
+          <div class="links">
+              <a href="#" id="forgotPasswordLink">Забыл пароль?</a>
+              <a href="./auth-signup.html">Регистрация</a>
+          </div>
+          
+          <input type="submit" value="Войти">
         </form>
       </div>
-   
+    </div>
+    <div class="modal" id="forgotPasswordModal">
+      <div class="modal-content">
+        <h2>Забыли пароль?</h2>
+        <p>Введите ваш email, чтобы сбросить пароль.</p>
+        <input type="email" id="forgotPasswordEmail" placeholder="Email" required>
+        <button id="resetPasswordButton" class="glow-on-hover">Сбросить пароль</button>
+        <button class="close-modal" id="closeForgotPasswordModal">Закрыть</button>
+      </div>
+    </div>
 
-    <!-- Footer start -->
-    <!-- <footer>
-        <div class="container">
-            <div class="footer__text">предложения по улучшению сайта, дизайна discord akita1200</div>
-        </div>
-    </footer> -->
-    <!-- Footer end -->
+    <!-- login form -->
+
 
     <!-- Scripts start -->
+    <script src="../js/login.js"></script>
     <script src="./src/js/modal.js"></script>
+    <script src="../js/forgot.js"></script>
   </body>
 </html>
