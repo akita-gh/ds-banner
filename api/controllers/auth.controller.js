@@ -55,13 +55,13 @@ class AuthController {
 
       if (!user) {
         return res
-          .status(400)
+          .status(401)
           .json({ message: `Пользователь ${username} не найден` });
       }
 
       const validPassword = bcrypt.compareSync(password, user.password);
       if (!validPassword) {
-        return res.status(400).json({ message: "Введен не верный пароль" });
+        return res.status(401).json({ message: "Введен не верный пароль" });
       }
 
       const token = generateAccessToken(user._id, username);
