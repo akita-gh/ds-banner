@@ -3,12 +3,13 @@ const jwt = require("jsonwebtoken");
 const { validationResult } = require("express-validator");
 const User = require("../models/user.model.js");
 
-const generateAccessToken = (id, username) => {
+const generateAccessToken = (id, username, role) => {
   const payload = {
     id,
     username,
+    role,
   };
-  return jwt.sign(payload, "secret", { expiresIn: "24h" });
+  return jwt.sign(payload, process.env.SECRET, { expiresIn: "24h" });
 };
 
 class AuthController {
@@ -22,12 +23,9 @@ class AuthController {
           .json({ message: "Ошибка при регистрации", errors });
       }
 
-      const { username, password } = req.body;
+      const { username, password, role } = req.body;
 
       const candidate = await User.findOne({ username });
-
-      console.log(username);
-
       if (candidate) {
         return res.json({ message: "Пользователь уже зарегестрирован" });
       }
@@ -36,6 +34,7 @@ class AuthController {
       const user = await new User({
         username,
         password: hashPassword,
+        role: !role ? ["USER"] : role,
       });
       user.save();
 
@@ -64,7 +63,7 @@ class AuthController {
         return res.status(401).json({ message: "Введен не верный пароль" });
       }
 
-      const token = generateAccessToken(user._id, username);
+      const token = generateAccessToken(user._id, username, user.role);
 
       await User.findOneAndUpdate(
         { username },
@@ -85,7 +84,7 @@ class AuthController {
       if (!token) {
         return res.status(404).json({ message: "Токен не найден" });
       }
-      const decodeData = jwt.verify(token, "secret");
+      const decodeData = jwt.verify(token, process.env.SECRET);
       req.user = decodeData;
 
       const user = await User.findOne({ username: decodeData.username });

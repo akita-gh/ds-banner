@@ -4,9 +4,11 @@ const fileUpload = require("express-fileupload");
 const cors = require("cors");
 require("dotenv").config();
 const authRoute = require("./routes/auth.route.js");
+const fileRoute = require("./routes/file.route.js");
 const app = express();
 const swaggerUi = require("swagger-ui-express");
 const swaggerJSDoc = require("swagger-jsdoc");
+
 const option = {
   definition: {
     openapi: "3.0.0",
@@ -39,6 +41,7 @@ app.use(
 );
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(spec));
+app.use("/api/file", fileRoute);
 app.use("/api/auth", authRoute);
 
 connectToMongo(app);
