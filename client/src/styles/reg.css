@@ -160,7 +160,7 @@
   }
   
   .modal-content {
-    background-color: rgb(36 36 36 / 85%);
+    background-color: #242424d9;
     padding: 20px;
     border-radius: 8px;
     position: absolute;
@@ -173,3 +173,20 @@
   .modal-content input {
     margin-top: 15px;
   }
+
+
+  /* Notification */
+  .notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fb0ae8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}

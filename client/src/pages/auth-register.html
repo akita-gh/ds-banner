@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Discord Banners - Регистрация</title>
+    <title>Auth</title>
   </head>
   <body>
     <!-- Navigation start -->
@@ -23,7 +23,9 @@
       <div class="container">
         <div class="nav__links">
           <div class="nav__item">
-            <a href="../../index.html" class="logo neonText">DISCORD BEAUTIFUL</a>
+            <a href="../../index.html" class="logo neonText"
+              >DISCORD BEAUTIFUL Admin registration</a
+            >
             <a href="../../index.html" class="mainpage">Главная</a>
           </div>
           <a href="#" class="ds">BY AKITA <span>discord akita1200</span></a>
@@ -31,33 +33,25 @@
       </div>
     </nav>
 
-    <!-- reg form -->
-
     <div class="container">
-    <div class="box box-reg">
-      <form id="registrationForm">
-        <h2>Регистрация</h2>
-        <div class="inputBox">
-            <input type="text" required="required" id="regUsername">
-            <span>Имя пользователя</span>
-            <i></i>
-        </div>
-        <div class="inputBox">
-            <input type="password" required="required" id="regPassword">
-            <span>Пароль</span>
-            <i></i>
-        </div>
-        <div class="links">
-            <!-- <a href="">Забыл пароль?</a> -->
-            <a href="./auth-signin.html">Есть аккаунт?</a>
-        </div>
-        <input type="submit" value="Зарегистрироваться">
+      <form class="registration-form">
+        <h1>Регистрация</h1>
+        <label for="username">nickname</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          autocomplete="off"
+          required
+        />
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit" class="glow-on-hover">
+          <a href="../../../client/src/pages/admin.html">Войти</a>
+        </button>
       </form>
     </div>
-</div>
-<div id="notification" class="notification"></div>
-    <!-- Scripts start -->
-    <script src="../js/reg-login.js"></script>
+    <script src="../js/register.js"></script>
     <script src="./src/js/modal.js"></script>
   </body>
 </html>
