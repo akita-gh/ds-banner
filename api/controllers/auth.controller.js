@@ -71,7 +71,7 @@ class AuthController {
         { new: true }
       );
 
-      return res.json(token);
+      return res.json({ token, username: user.username });
     } catch (err) {
       console.log(err);
       res.json({ message: "Ошибка авторизации" });
@@ -91,7 +91,7 @@ class AuthController {
 
       if (user) {
         if (user.token === token) {
-          return res.status(200).json({ isAuth: true });
+          return res.status(200).json({ isAuth: true, user: user.username });
         } else {
           return res.status(200).json({ isAuth: false });
         }

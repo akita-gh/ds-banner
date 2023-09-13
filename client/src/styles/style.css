@@ -197,6 +197,34 @@ body {
   border: var(--main-purple-color) 1px solid;
 }
 
+/* logout btn */
+
+.login h3 {
+  position: absolute;
+  top: 43px;
+  left: 1220px;
+}
+
+#logoutButton {
+  position: absolute;
+  top: 23px;
+  right: 56px;
+  padding: 8px 24px;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  color: #fff;
+}
+
+#logoutButton:hover {
+  color: var(--main-purple-color);
+  transition: 0.5s ease;
+  border: var(--main-purple-color) 1px solid;
+  cursor: pointer;
+}
+
   /* root */
 
   :root {

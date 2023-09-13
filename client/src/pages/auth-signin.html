@@ -41,7 +41,7 @@
               <i></i>
           </div>
           <div class="inputBox">
-              <input type="password" required="required" id="loginUsername">
+              <input type="password" required="required" id="loginPassword">
               <span>Пароль</span>
               <i></i>
           </div>
@@ -57,20 +57,22 @@
     <div class="modal" id="forgotPasswordModal">
       <div class="modal-content">
         <h2>Забыли пароль?</h2>
-        <p>Введите ваш email, чтобы сбросить пароль.</p>
+        <p>Введите ваш email, чтобы сбросить пароль. [Данная функция в разработке]</p>
         <input type="email" id="forgotPasswordEmail" placeholder="Email" required>
         <button id="resetPasswordButton" class="glow-on-hover">Сбросить пароль</button>
         <button class="close-modal" id="closeForgotPasswordModal">Закрыть</button>
       </div>
     </div>
+    <div id="notification" class="notification"></div>
+
 
     <!-- login form -->
 
 
     <!-- Scripts start -->
-    <script src="../js/reg-login.js"></script>
-    <script src="../js/login.js"></script>
-    <script src="./src/js/modal.js"></script>
+    <!-- <script src="../js/reg-login.js"></script> -->
+    <script src="../js/loginuser.js"></script>
+    <!-- <script src="./src/js/modal.js"></script> -->
     <script src="../js/forgot.js"></script>
   </body>
 </html>
