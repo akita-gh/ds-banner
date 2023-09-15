@@ -17,9 +17,13 @@
  *         password:
  *           type: string
  *           description: password
+ *         role:
+ *           type: array
+ *           description: ["USER"]
  *       example:
  *          username: user123
  *          password: pass12345
+ *          role: ["USER"]
  */
 
 /**
@@ -37,6 +41,8 @@
  *                 type: string
  *               password:
  *                 type: string
+ *               role:
+ *                 type: array
  *           required: true
  *           description: данные для регестрации
  *     tags: [Auth]

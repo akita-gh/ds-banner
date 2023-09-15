@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const zlib = require("zlib");
 const archiver = require("archiver");
 const uuid = require("uuid");
 const Bunner = require("../models/bunners.model");
@@ -76,6 +75,30 @@ class FileController {
     res.setHeader("Content-type", "application/zip");
     archive.pipe(res);
     archive.finalize();
+  }
+
+  async removeFile(req, res) {
+    const { id } = req.body;
+
+    const banner = await Bunner.findOneAndRemove({ _id: id });
+    fs.rmdir(
+      path.resolve(__dirname, "..", banner.folderPath),
+      { recursive: true },
+      (err) => console.log(err)
+    );
+    res.status(200).json({ message: `Файл удален ${banner}` });
+  }
+
+  async getBanners(req, res) { 
+    const banner = await Bunner.find();
+    res.status(200).json(banner);
+  }
+   
+  async getBanner(req, res) {
+    const { id } = req.query;
+
+    const banner = await Bunner.findOne({ _id: id });
+    res.status(200).json(banner);
   }
 }
 
